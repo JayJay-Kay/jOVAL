@@ -1,0 +1,35 @@
+CLASSES=\
+	gov.nist.cve.feed.ObjectFactory	\
+	gov.nist.cve.feed.package-info	\
+	mil.disa.arf.ObjectFactory	\
+	mil.disa.arf.package-info	\
+	mil.disa.asset.ObjectFactory	\
+	mil.disa.asset.organization.ObjectFactory	\
+	mil.disa.asset.organization.package-info	\
+	mil.disa.asset.package-info	\
+	mil.disa.asset.person.ObjectFactory	\
+	mil.disa.asset.person.package-info	\
+	mil.disa.cce.ObjectFactory	\
+	mil.disa.cce.package-info	\
+	mil.disa.cpe.ObjectFactory	\
+	mil.disa.cpe.package-info	\
+	mil.disa.cpe.record.ObjectFactory	\
+	mil.disa.cpe.record.package-info	\
+	mil.disa.cve.ObjectFactory	\
+	mil.disa.cve.package-info	\
+	mil.disa.cvss.ObjectFactory	\
+	mil.disa.cvss.package-info	\
+	mil.disa.patch.ObjectFactory	\
+	mil.disa.patch.package-info	\
+	mil.disa.scap.ObjectFactory	\
+	mil.disa.scap.package-info	\
+	mil.disa.types.ObjectFactory	\
+	mil.disa.types.package-info	\
+	mil.disa.vulnerability.ObjectFactory	\
+	mil.disa.vulnerability.package-info	\
+	mil.disa.xccdf.ObjectFactory	\
+	mil.disa.xccdf.package-info	\
+	mil.disa.xccdf.platform.ObjectFactory	\
+	mil.disa.xccdf.platform.package-info	\
+	mil.disa.xccdfp.ObjectFactory	\
+	mil.disa.xccdfp.package-info

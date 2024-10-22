@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  Copyright (C) 2013 jOVAL.org.  All rights reserved.
+  This software is licensed under the LGPL 3.0 license available at http://www.gnu.org/licenses/lgpl.txt
+
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ocil="http://scap.nist.gov/schema/ocil/2.0"
+            xmlns:ocil-diag="http://www.gocil.org/schemas/ocil/2.0/diagnostic"
+            xmlns:ocil-var="http://www.gocil.org/schemas/ocil/2.0/variables"
+            targetNamespace="http://www.gocil.org/schemas/ocil/2.0/diagnostic"
+            elementFormDefault="qualified"
+            version="1.0">
+    <xsd:import namespace="http://scap.nist.gov/schema/ocil/2.0"/>
+    <xsd:import namespace="http://www.gocil.org/schemas/ocil/2.0/variables"/>
+    <xsd:element name="ocil_result_diagnostics">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="questionnaire" type="ocil-diag:QuestionnaireType" minOccurs="0" maxOccurs="unbounded"/>
+                <xsd:element name="variables" type="ocil-var:VariablesType" minOccurs="0" maxOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="QuestionnaireType">
+        <xsd:sequence>
+            <xsd:element name="title" type="ocil:TextType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="actions" type="ocil-diag:ActionsType" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="ocil:QuestionnaireIDPattern" use="required"/>
+        <xsd:attribute name="result" type="ocil:ResultType"/>
+    </xsd:complexType>
+    <xsd:complexType name="ActionsType">
+        <xsd:sequence>
+            <xsd:element name="test_action_sequence" type="ocil-diag:ActionSequenceType" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="negate" type="xsd:boolean" use="optional" default="false"/>
+        <xsd:attribute name="operation" type="ocil:OperatorType" use="optional" default="AND"/>
+    </xsd:complexType>
+    <xsd:complexType name="ActionSequenceType">
+        <xsd:sequence>
+            <xsd:element ref="ocil-diag:action" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="result" type="ocil:ResultType" use="required"/>
+    </xsd:complexType>
+    <xsd:element name="action" type="ocil-diag:ActionType" abstract="true"/>
+    <xsd:complexType name="ActionType"/>
+    <xsd:element name="question_ref" substitutionGroup="ocil-diag:action">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="ocil-diag:ActionType">
+                    <xsd:sequence>
+                        <xsd:element name="question_text" type="ocil:QuestionTextType" minOccurs="1" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                    <xsd:attribute name="id" type="ocil:TestActionRefValuePattern" use="required"/>
+                    <xsd:attribute name="answer" type="xsd:string" use="optional"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="questionnaire_ref" substitutionGroup="ocil-diag:action">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="ocil-diag:ActionType">
+                    <xsd:attribute name="id" type="ocil:QuestionnaireIDPattern" use="required"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 JovalCM.com.  All rights reserved.
+  This software is licensed under the LGPL 3.0 license available at http://www.gnu.org/licenses/lgpl.txt
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-common-5"
+                  schemaLocation="../schemas/oval/merged/oval-common-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5"
+                  schemaLocation="../schemas/oval/merged/aix-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#aix-def"
+                  schemaLocation="../schemas/oval/merged/android-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#apache"
+                  schemaLocation="../schemas/oval/merged/apache-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#apple_ios"
+                  schemaLocation="../schemas/oval/merged/apple-ios-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#asa"
+                  schemaLocation="../schemas/oval/merged/asa-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#catos"
+                  schemaLocation="../schemas/oval/merged/catos-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#esx"
+                  schemaLocation="../schemas/oval/merged/esx-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#freebsd"
+                  schemaLocation="../schemas/oval/merged/freebsd-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#hpux"
+                  schemaLocation="../schemas/oval/merged/hpux-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent"
+                  schemaLocation="../schemas/oval/merged/independent-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios"
+                  schemaLocation="../schemas/oval/merged/ios-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#iosxe"
+                  schemaLocation="../schemas/oval/merged/iosxe-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#junos"
+                  schemaLocation="../schemas/oval/merged/junos-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux"
+                  schemaLocation="../schemas/oval/merged/linux-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#macos"
+                  schemaLocation="../schemas/oval/merged/macos-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#netconf"
+                  schemaLocation="../schemas/oval/merged/netconf-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5"
+                  schemaLocation="../schemas/oval/merged/oval-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#panos"
+                  schemaLocation="../schemas/oval/merged/panos-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#pixos"
+                  schemaLocation="../schemas/oval/merged/pixos-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#sharepoint"
+                  schemaLocation="../schemas/oval/merged/sharepoint-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#solaris"
+                  schemaLocation="../schemas/oval/merged/solaris-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#unix"
+                  schemaLocation="../schemas/oval/merged/unix-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows"
+                  schemaLocation="../schemas/oval/merged/windows-definitions-schema.xsd"/>
+
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#nxos"
+                  schemaLocation="../../scap-extensions/schemas/x-nxos-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#x-net"
+                  schemaLocation="../../scap-extensions/schemas/x-protocols-definitions-schema.xsd"/>
+      <xsd:import namespace="http://oval.mitre.org/XMLSchema/oval-definitions-5#cmd"
+                  schemaLocation="../../scap-extensions/schemas/x-shellcommand-definitions-schema.xsd"/>
+</xsd:schema>
